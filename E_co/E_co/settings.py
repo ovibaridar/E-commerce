@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'shop.apps.ShopConfig',
     'blog.apps.BlogConfig',
+    'chakemyself.apps.ChakemyselfConfig',
     'myprofile.apps.MyprofileConfig',
     'django.contrib.admin',
     'django.contrib.auth',

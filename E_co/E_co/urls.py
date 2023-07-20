@@ -26,5 +26,6 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('blog/',include('blog.urls')),
     path('shop/',include('shop.urls')),
+    path('chakemyself/',include('chakemyself.urls')),
     path('myprofile/',include('myprofile.urls'))
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
