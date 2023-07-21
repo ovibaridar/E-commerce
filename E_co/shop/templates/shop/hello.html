@@ -23,7 +23,7 @@
         {% for prod in products %}
             <div class="carousel-item {% if forloop.first %}active{% endif %}">
                 <div class="card-wrapper container-sm d-flex justify-content-around">
-                    {% for item in prod %}
+                    {% for item in products %}
                         <div class="card" style="width: 18rem;">
                             <img src="{{ item.image.url }}" class="card-img-top" alt="{{ item.products_name }}">
                             <div class="card-body">
