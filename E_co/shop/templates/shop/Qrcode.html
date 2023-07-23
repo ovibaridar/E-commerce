@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Qrcode</title>
+    {%include "shop/blink.html"%}
+</head>
+<body>
+
+<div class="container">
+    {%load static%}
+    {% if img %}
+        <img src="{% static 'qrimg/p2.jpg' %}">
+    {% else %}
+        <form action="{% url 'qrcode' %}" method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Enter your text to Generate</label>
+                <input type="text" name="data" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <h5 style="color:red;">{{ error }}</h5>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    {% endif %}
+</div>
+
+
+{%include "shop/bscript.html"%}
+</body>
+</html>
