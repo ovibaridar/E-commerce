@@ -15,3 +15,14 @@ class product(models.Model):
 
     def __str__(self):
         return self.products_name
+
+class qrname(models.Model):
+    Qrname_id=models.AutoField
+    name = models.CharField(max_length=100,default="")
+    second_name = models.CharField(max_length=100,default="")
+    email = models.CharField(max_length=100,default="")
+    phone = models.CharField(max_length=100,default="")
+    image = models.ImageField(upload_to="shop/qrimgs",default="")
+
+    def __str__(self):
+        return self.name

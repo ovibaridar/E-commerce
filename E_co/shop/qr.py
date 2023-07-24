@@ -1,4 +1,3 @@
-
 from django.shortcuts import render
 from django.http import HttpResponseGone
 from .forms import MyForm
@@ -13,7 +12,6 @@ def formqr(request):
             email = form.cleaned_data['email']
             phone = form.cleaned_data['phone']
             message = form.cleaned_data['message']
-
             # Do something with the form data (e.g., save to database)
 
             # Redirect to a success page
