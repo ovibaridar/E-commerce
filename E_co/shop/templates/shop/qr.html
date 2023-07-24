@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Form with Validation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+    form .form-group {
+  margin-bottom: 20px;
+}
+
+form .invalid-feedback {
+  display: none;
+  color: red;
+}
+
+form.was-validated input:invalid,
+form.was-validated textarea:invalid {
+  border-color: red;
+}
+
+form.was-validated .invalid-feedback {
+  display: block;
+}
+
+    </style>
+</head>
+<body>
+<div class="container mt-4">
+    <form id="myForm" novalidate>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+            <div class="invalid-feedback">Please enter your name.</div>
+        </div>
+
+        <div class="form-group">
+            <label for="second_name">Second Name:</label>
+            <input type="text" class="form-control" id="second_name" name="second_name" required>
+            <div class="invalid-feedback">Please enter your second name.</div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+            <div class="invalid-feedback">Please enter a valid email address.</div>
+        </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="number" class="form-control" id="phone" name="phone" required
+                   min="10000000000" max="99999999999" placeholder="Enter 11-digit phone number">
+            <div class="invalid-feedback" data-value-missing="Please enter your number."
+                 data-value-not-in-range="Please enter a valid 11-digit phone number."></div>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            <div class="invalid-feedback">Please enter your message.</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<script>
+    // Form validation using JavaScript
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+        if (!this.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+        this.classList.add("was-validated");
+    });
+
+</script>
+</body>
+</html>

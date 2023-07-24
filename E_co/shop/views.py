@@ -15,7 +15,7 @@ def shophome(request):
 
 def genarator(request):
 
-    return render(request,'shop/Qrcode.html',proms)
+    return render(request,'shop/Qrcode.html')
 
 
 
@@ -25,11 +25,11 @@ def qrcode(request):
     data = request.POST.get('data', '')
 
     if data == "":
-        error = "Enter your text"
+        error = "Enter your text here"
         proms = {'error': error}
         return render(request, 'shop/Qrcode.html', proms)
     img = make(data)
-    img.save('shop/static/qrimg/p2.jpg')
+    img.save('shop/static/qrimg/Qrimg.jpg')
     proms = { 'img': img}
     return render(request, 'shop/Qrcode.html', proms)
 
