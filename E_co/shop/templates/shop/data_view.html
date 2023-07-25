@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>view</title>
+    {%include 'shop/blink.html'%}
+</head>
+<body>
+{% load static%}
+{%include 'shop/shop_nav.html'%}
+<div>
+    {{length}}
+</div>
+
+<div class="container">
+    <div class="row">
+        {% for all_info in all_informations %}
+        <div class="col-lg-3 ">
+            <div class="card" style="width: 20rem;">
+                <img src="{{ all_info.image.url}}" class="card-img-top" alt="...">
+                <div class="card-body" style="width: 30rem;">
+                    <h5 class="card-title">Name : {{all_info.name}} {{all_info.second_name}}</h5>
+                    <h5 class="card-title">Email : {{all_info.email}}</h5>
+                    <h5 class="card-title">Phone : {{all_info.phone}}</h5>
+                    <h5 class="card-title">Date : {{all_info.datetime}}</h5>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+
+
+
+
+{%include 'shop/bscript.html'%}
+</body>
+</html>

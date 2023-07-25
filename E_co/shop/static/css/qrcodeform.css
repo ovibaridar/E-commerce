@@ -1,0 +1,36 @@
+input[type="text"],input[type="text"],input[type="email"],input[type="phone"],textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            color: #333; /* Text color */
+        }
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="phone"]::placeholder,
+textarea::placeholder {
+    color: red; /* Placeholder text color */
+}
+
+
+input[type="text"]::placeholder {
+    content: "Enter your name";
+}
+
+#id_second_name::placeholder {
+    content: "Enter your second name";
+}
+
+#id_email::placeholder {
+    content: "Enter your email";
+}
+
+#id_phone::placeholder {
+    content: "Enter your phone number";
+}
+
+#id_message::placeholder {
+    content: "Enter your message";
+}
