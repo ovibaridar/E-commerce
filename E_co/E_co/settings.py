@@ -58,7 +58,7 @@ ROOT_URLCONF = 'E_co.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'E_co', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
