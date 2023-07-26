@@ -5,7 +5,7 @@
       <div class="card-wrapper container-sm d-flex justify-content-around">
         {% for product in grouped_products.0 %}
         <div class="card" style="width: 18rem;">
-          <img src="{{ product.image.url }}" style="height: 285px; width: 286px; object-fit: cover; object-position: center; " class="card-img-top cardwh" alt="...">
+          <img src="{{ product.image.url }}" class="card-img-top cardwh rounded float-end" alt="...">
           <div class="card-body">
             <h5 class="card-title">{{ product.products_name }}</h5>
             <button type="button" class="btn btn-primary">Primary</button>
@@ -20,7 +20,7 @@
       <div class="card-wrapper container-sm d-flex justify-content-around">
         {% for product in products_set %}
         <div class="card" style="width: 18rem;">
-          <img src="{{ product.image.url }}" style="height: 285px; width: 286px; object-fit: cover; object-position: center; " class="card-img-top cardwh" alt="...">
+          <img src="{{ product.image.url }}"  class="card-img-top cardwh rounded float-end" alt="...">
           <div class="card-body">
             <h5 class="card-title">{{ product.products_name }}</h5>
             <button type="button" class="btn btn-primary">Primary</button>

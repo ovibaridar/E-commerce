@@ -1,0 +1,15 @@
+<div class="container-fluid mt-3">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+        {% for all_product in all_products %}
+        <div class="col mb-4">
+            <div class="card">
+                <img src="{{ all_product.image.url }}"  class="card-img-top cardwh rounded float-end" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{ all_product.products_name }}</h5>
+                    <button type="button" class="btn btn-primary">Primary</button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

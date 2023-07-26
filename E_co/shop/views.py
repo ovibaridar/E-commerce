@@ -14,7 +14,7 @@ def shophome(request):
     grouped_products = [all_products[i:i + num_products_per_set] for i in
                         range(0, len(all_products), num_products_per_set)]
 
-    return render(request, 'shop/hello.html', {'grouped_products': grouped_products})
+    return render(request, 'shop/hello.html', {'grouped_products': grouped_products , 'all_products':all_products})
 
 
 def genarator(request):
