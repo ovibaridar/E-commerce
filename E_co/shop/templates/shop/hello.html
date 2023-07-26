@@ -7,89 +7,18 @@
     {%include "shop/blink.html"%}
 
 
-
 </head>
 
 <body>
 <!--  nav on-->
 {%include "shop/shop_nav.html"%}
+{%include "shop/craousel.html"%}
+
+
 <!--nav off-->
 <!--carousel on -->
 
-  <div id="carouselExampleControls" class="carousel carousel-dark mt-2 slide" data-bs-ride="carousel">
 
-    <div class="carousel-inner">
-      <div class="carousel-item ">
-
-        <div class="card-wrapper container-sm d-flex  justify-content-around">
-
-          <div class="card  " style="width: 18rem;">
-            <img src="https://source.unsplash.com/collection/190727/1600x900" style="height: 285px; width: 286px; object-fit: cover; object-position: center; "   class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title"> mobile</h5>
-            </div>
-          </div>
-
-          <div class="card  " style="width: 18rem;">
-            <img src="https://source.unsplash.com/collection/190727/1600x900" style="height: 285px; width: 286px; object-fit: cover; object-position: center; "   class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title"> mobile</h5>
-            </div>
-          </div>
-
-          <div class="card  " style="width: 18rem;">
-            <img src="https://source.unsplash.com/collection/190727/1600x900" style="height: 285px; width: 286px; object-fit: cover; object-position: center; "   class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title"> mobile</h5>
-            </div>
-          </div>
-
-          <div class="card  " style="width: 18rem;">
-            <img src="https://source.unsplash.com/collection/190727/1600x900" style="height: 285px; width: 286px; object-fit: cover; object-position: center; "   class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title"> mobile</h5>
-            </div>
-          </div>
-
-
-
-        </div>
-      </div>
-
-
-
-
-
-
-      <div class="carousel-item active">
-
-        <div class="card-wrapper container-sm d-flex   justify-content-around">
-        {% for product in products|slice:":4" %}
-          <div class="card  " style="width: 18rem;">
-            <img src="{{ product.image.url }}" style="height: 285px; width: 286px; object-fit: cover; object-position: center; " class="card-img-top cardwh" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">{{ product.products_name }}</h5>
-              <button type="button" class="btn btn-primary">Primary</button>
-            </div>
-          </div>
-          {%endfor%}
-
-        </div>
-      </div>
-
-
-
-
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-</div>
 
 
 {{products.products_name}}
