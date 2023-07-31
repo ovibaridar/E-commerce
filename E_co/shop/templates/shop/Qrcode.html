@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qrcode</title>
     {%include "shop/blink.html"%}
 </head>
@@ -12,20 +14,20 @@
 <div class="container">
     {%load static%}
     {% if img %}
-        <img src="{% static 'qrimg/Qrimg.jpg' %}">
+    <img src="{% static 'qrimg/Qrimg.jpg' %}">
     {% else %}
-        <form action="{% url 'qrcode' %}" method="post">
-            {% csrf_token %}
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Enter your text to Generate</label>
-                <input type="text" name="data" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                {% if error %}
-                <h5 style="color:red;">{{ error }}</h5>
-                {%endif%}
-            </div>
+    <form action="{% url 'qrcode' %}" method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Enter your text to Generate</label>
+            <input type="text" name="data" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            {% if error %}
+            <h5 style="color:red;">{{ error }}</h5>
+            {%endif%}
+        </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
     {% endif %}
 </div>
 

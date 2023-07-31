@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'shop.apps.ShopConfig',
+    'Eco_Tourism.apps.EcoTourismConfig',
     'blog.apps.BlogConfig',
     'chakemyself.apps.ChakemyselfConfig',
     'myprofile.apps.MyprofileConfig',
