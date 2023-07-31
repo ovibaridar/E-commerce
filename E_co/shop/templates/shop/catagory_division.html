@@ -1,0 +1,71 @@
+<!-- catagory_division.html -->
+
+<!-- catagory_division.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>shop me</title>
+    <!-- Include Bootstrap CSS link -->
+    {% include "shop/blink.html" %}
+</head>
+
+<body>
+    <!--  nav on-->
+    {% include "shop/shop_nav.html" %}
+    <!--{% include "shop/all_producet_view.html"%}-->
+    <!--carousel on -->
+    {% for category, products in grouped_products_by_category.items %}
+    <h5 class="container">Products in {{ category }}</h5>
+    <div id="carousel_{{ category }}" class="carousel carousel-dark mt-2 slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="card-wrapper container-sm d-flex justify-content-around">
+                    {% for prod in products.0 %}
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{ prod.image.url }}" class="card-img-top cardwh rounded float-end" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ prod.products_name }}</h5>
+                            <button type="button" class="btn btn-primary">Primary</button>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            {% for products_set in products|slice:"1:" %}
+            <div class="carousel-item ">
+                <div class="card-wrapper container-sm d-flex justify-content-around">
+                    {% for prod in products_set %}
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{ prod.image.url }}" class="card-img-top cardwh rounded float-end" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ prod.products_name }}</h5>
+                            <button type="button" class="btn btn-primary">Primary</button>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel_{{ category }}"
+                data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel_{{ category }}"
+                data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    {% endfor %}
+    <!--nav off-->
+
+    <!--carousel end-->
+    {% include "shop/bscript.html" %}
+</body>
+</html>
