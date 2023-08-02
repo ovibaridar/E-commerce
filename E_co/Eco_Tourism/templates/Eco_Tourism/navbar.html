@@ -1,8 +1,25 @@
 {% load static %}
 
+<style>
+    .nav-link {
+        font-weight: 700;
+
+
+        }
+        a{
+        text-decoration:none;
+        color:black;
+        }
+        .navbar-nav.ml-auto {
+            margin-left: auto;
+        }
+</style>
+
+
+
 <nav class="navbar-expand-lg navbar ">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/Eco_Tourism/">
             <img src="{% static 'Eco_Tourism/logo.svg' %}" alt="Logo" width="30" height="24"
                  class="d-inline-block align-text-top ">Eco Tourism
         </a>
@@ -17,7 +34,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-10 d-flex justify-content-center">
                     <form>
-                        <input class="form-control" placeholder="Search your place">
+                        <input class="form-control mt-sm-2" placeholder="Search your place">
                         <!-- Add any other form elements here -->
                     </form>
                 </div>
@@ -25,16 +42,16 @@
 
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link {{active}}" aria-current="page" href="#">Home Page</a>
+                    <a class="nav-link {{home_active}} "  href="/Eco_Tourism/">Home Page</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Eco-Tours</a>
+                    <a class="nav-link {{eco_tours_active}}" href="eco_tours">Eco-Tours</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Hotels</a>
+                    <a class="nav-link {{hotels_active}}" href="eco_hotels">Hotels</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Blog</a>
+                    <a class="nav-link {{blog_active}}"  href="blog">Blog</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -42,13 +59,13 @@
                         More
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Responsible Travel Tips</a></li>
-                        <li><a class="dropdown-item" href="#">Photo Gallery and Videos</a></li>
-                        <li><a class="dropdown-item" href="#">Sustainability Initiatives</a></li>
-                        <li><a class="dropdown-item" href="#">Booking and Reservations</a></li>
-                        <li><a class="dropdown-item" href="#">Testimonials</a></li>
-                        <li><a class="dropdown-item" href="#">About Us</a></li>
-                        <li><a class="dropdown-item" href="#">Contact</a></li>
+                        <li><a class="dropdown-item" href="Travel_Tips">Responsible Travel Tips</a></li>
+                        <li><a class="dropdown-item" href="Photo_and_Videos">Photo Gallery and Videos</a></li>
+                        <li><a class="dropdown-item" href="Sustainability">Sustainability Initiatives</a></li>
+                        <li><a class="dropdown-item" href="Booking">Booking and Reservations</a></li>
+                        <li><a class="dropdown-item" href="Testimonials">Testimonials</a></li>
+                        <li><a class="dropdown-item" href="About_Us">About Us</a></li>
+                        <li><a class="dropdown-item" href="Contact">Contact</a></li>
                     </ul>
 
             </ul>

@@ -7,25 +7,9 @@
     {%include "Eco_Tourism/blink.html"%}
     <title>Home Page</title>
     <style>
-        /* Custom CSS to float the "Contact" item to the right */
-        .navbar-nav.ml-auto {
-            margin-left: auto;
-        }
-        .nav-link {
-        font-weight: 700;
-
-        }
-        a{
-        text-decoration:none;
-        color:black;
-        }
-
         .card > img{
             height:189px;
         }
-
-
-
 
 
     </style>
@@ -38,37 +22,14 @@
 <!--card on-->
 {% load static %}
 <div class="container mt-2">
-    <div class="row">
-        <div class="col-lg-3 mt-2">
-            <a href="#">
-                <div class="card" style="width: 18rem;">
-                    <img src="{% static 'Eco_Tourism/card_img/p1.jpg'%}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's
-                            content.</p>
-                    </div>
-                </div>
-            </a>
-        </div>
+    <div class="row gx-2">
 
-        <div class="col-lg-3 mt-2 ">
-            <a href="#">
-                <div class="card" style="width: 18rem;">
-                    <img src="{% static 'Eco_Tourism/card_img/p2.jpg'%}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's
-                            content.</p>
-                    </div>
-                </div>
-            </a>
-        </div>
 
-        <div class="col-lg-3 mt-2">
-            <a href="#">
+        {% for i in range %}
+        <div class="col-lg-3 col-md-4 mt-2">
+            <a href="blog">
                 <div class="card" style="width: 18rem;">
-                    <img src="{% static 'Eco_Tourism/card_img/p3.jpg'%}" class="card-img-top" alt="...">
+                    <img class="card-img-top" src="{% static 'Eco_Tourism/card_img/p2.jpg'%}" class="card-img-top">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's
@@ -77,97 +38,8 @@
                 </div>
             </a>
         </div>
+        {% endfor %}
 
-        <div class="col-lg-3 mt-2">
-            <a href="#">
-                <div class="card" style="width: 18rem;">
-                    <img src="{% static 'Eco_Tourism/card_img/p4.jpg'%}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's
-                            content.</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <div class="col-lg-3 mt-2">
-            <a href="#">
-                <div class="card" style="width: 18rem;">
-                    <img src="{% static 'Eco_Tourism/card_img/p5.jpg'%}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's
-                            content.</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <div class="col-lg-3 mt-2">
-            <a href="#">
-                <div class="card" style="width: 18rem;">
-                    <img src="{% static 'Eco_Tourism/card_img/p6.jpg'%}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's
-                            content.</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <div class="col-lg-3 mt-2">
-            <a href="#">
-                <div class="card" style="width: 18rem;">
-                    <img src="{% static 'Eco_Tourism/card_img/p7.jpg'%}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's
-                            content.</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <div class="col-lg-3 mt-2">
-            <a href="#">
-                <div class="card" style="width: 18rem;">
-                    <img src="{% static 'Eco_Tourism/card_img/p8.jpg'%}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's
-                            content.</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <div class="col-lg-3 mt-2">
-            <a href="#">
-                <div class="card" style="width: 18rem;">
-                    <img src="{% static 'Eco_Tourism/card_img/p9.jpg'%}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's
-                            content.</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <div class="col-lg-3 mt-2">
-            <a href="#">
-                <div class="card" style="width: 18rem;">
-                    <img src="{% static 'Eco_Tourism/card_img/p10.jpg'%}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's
-                            content.</p>
-                    </div>
-                </div>
-            </a>
-        </div>
     </div>
 </div>
 
@@ -176,7 +48,6 @@
 <!--fotter on -->
 {%include "Eco_Tourism/Eco_fotter.html"%}
 <!--fotter off -->
-
 
 
 {%include "Eco_Tourism/bscript.html"%}
