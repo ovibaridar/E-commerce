@@ -26,6 +26,7 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('blog/',include('blog.urls')),
     path('shop/',include('shop.urls')),
+    path('sketch/',include('sketch.urls')),
     path('Eco_Tourism/',include('Eco_Tourism.urls')),
     path('chakemyself/',include('chakemyself.urls')),
     path('myprofile/',include('myprofile.urls'))

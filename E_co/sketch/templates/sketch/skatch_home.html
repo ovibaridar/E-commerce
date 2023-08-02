@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image to Sketch Conversion</title>
+    <style>
+        img {
+            height: 300px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image to Sketch Conversion</h1>
+    <form action="{% url 'sketch_conversion' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="image" accept="image/*">
+        <input type="submit" value="Convert to Sketch">
+    </form>
+
+    {% if sketch_img_path %}
+    <h2>Sketch Result</h2>
+    <img src="{{ sketch_img_path }}" alt="Sketch">
+    <a href="{{ sketch_img_path }}"  download>Dwonload</a>
+    {% endif %}
+</body>
+</html>

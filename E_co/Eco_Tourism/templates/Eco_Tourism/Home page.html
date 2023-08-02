@@ -15,15 +15,216 @@
         font-weight: 700;
 
         }
+        a{
+        text-decoration:none;
+        color:black;
+        }
+
+        .card > img{
+            height:189px;
+        }
+
+
+
 
 
     </style>
 </head>
 <body>
 <!--    Navbar on-->
-
 {%include "Eco_Tourism/navbar.html"%}
 <!--    Navbar off-->
+
+<!--card on-->
+{% load static %}
+<div class="container mt-2">
+    <div class="row">
+        <div class="col-lg-3 mt-2">
+            <a href="#">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'Eco_Tourism/card_img/p1.jpg'%}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's
+                            content.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-lg-3 mt-2 ">
+            <a href="#">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'Eco_Tourism/card_img/p2.jpg'%}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's
+                            content.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-lg-3 mt-2">
+            <a href="#">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'Eco_Tourism/card_img/p3.jpg'%}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's
+                            content.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-lg-3 mt-2">
+            <a href="#">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'Eco_Tourism/card_img/p4.jpg'%}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's
+                            content.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-lg-3 mt-2">
+            <a href="#">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'Eco_Tourism/card_img/p5.jpg'%}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's
+                            content.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-lg-3 mt-2">
+            <a href="#">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'Eco_Tourism/card_img/p6.jpg'%}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's
+                            content.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-lg-3 mt-2">
+            <a href="#">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'Eco_Tourism/card_img/p7.jpg'%}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's
+                            content.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-lg-3 mt-2">
+            <a href="#">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'Eco_Tourism/card_img/p8.jpg'%}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's
+                            content.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-lg-3 mt-2">
+            <a href="#">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'Eco_Tourism/card_img/p9.jpg'%}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's
+                            content.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-lg-3 mt-2">
+            <a href="#">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'Eco_Tourism/card_img/p10.jpg'%}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's
+                            content.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!--card off-->
+
+<!--fotter on -->
+
+<footer class="bg-dark text-center text-white mt-3">
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Google -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+
+      <!-- Github -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2023 Copyright:
+    <a class="text-white" href="https://mdbootstrap.com/">Al Arman Ovi</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+<!--fotter off -->
+
+
 
 {%include "Eco_Tourism/bscript.html"%}
 </body>
