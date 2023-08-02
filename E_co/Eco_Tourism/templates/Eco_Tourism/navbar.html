@@ -6,20 +6,32 @@
             <img src="{% static 'Eco_Tourism/logo.svg' %}" alt="Logo" width="30" height="24"
                  class="d-inline-block align-text-top ">Eco Tourism
         </a>
+
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse   navbar-collapse" id="navbarSupportedContent">
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10 d-flex justify-content-center">
+                    <form>
+                        <input class="form-control" placeholder="Search your place">
+                        <!-- Add any other form elements here -->
+                    </form>
+                </div>
+            </div>
+
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home Page</a>
+                    <a class="nav-link {{active}}" aria-current="page" href="#">Home Page</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Eco-Tours</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Destinations</a>
+                    <a class="nav-link" href="#">Hotels</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Blog</a>
