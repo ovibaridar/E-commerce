@@ -1,10 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Grammar Analyzer</title>
 </head>
 <body>
-    hi i am on
+    <h1>Grammar Analyzer</h1>
+    <form method="post" action="{% url 'index' %}">
+        {% csrf_token %}
+        <label for="sentence">Enter a sentence:</label><br>
+        <input type="text" id="sentence" name="sentence" required><br>
+
+        <label for="language">Select language:</label>
+        <select id="language" name="language">
+            <option value="en-US">English (US)</option>
+            <option value="en-GB">English (UK)</option>
+            <!-- Add more language options here -->
+        </select><br>
+
+        <input type="submit" value="Check Grammar">
+    </form>
+
+    {% if categorized_errors %}
+        <h2>Analysis Result:</h2>
+        {% for category, errors in categorized_errors.items %}
+            <h3>{{ category }}</h3>
+            {% if errors %}
+                <ul>
+                    {% for error in errors %}
+                        <li>{{ error.message }}</li>
+                        {% if error.suggestions %}
+                            <ul>
+                                {% for suggestion in error.suggestions %}
+                                    <li>{{ suggestion }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No {{ category }} errors found!</p>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        <p>No grammar errors found!</p>
+    {% endif %}
 </body>
 </html>

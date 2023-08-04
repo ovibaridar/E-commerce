@@ -8,7 +8,6 @@ class product(models.Model):
 
     products_id=models.AutoField
     products_name=models.CharField(max_length=30)
-
     catagory=models.CharField(max_length=30,default="")
     sub_catagory=models.CharField(max_length=30,default="")
     price=models.CharField(max_length=30,default=0)
@@ -42,3 +41,7 @@ class qrname(models.Model):
                 output, 'ImageField', "%s.jpg" % self.image.name.split('.')[0], 'image/jpeg', output.getbuffer().nbytes, None
             )
         super(qrname, self).save(*args, **kwargs)
+
+
+class school_addmission(models.Model):
+    name=models.CharField(max_length=20)

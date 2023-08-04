@@ -3,7 +3,7 @@ from .import views
 
 urlpatterns = [
 
-    path('', views.chake, name='chake'),
+    path('', views.index, name='index'),
 ]
 
 
