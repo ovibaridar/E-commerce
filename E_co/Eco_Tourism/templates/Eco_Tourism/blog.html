@@ -8,6 +8,7 @@
     {% load static %}
     <!-- Include the CSS file using Django template syntax -->
     <link href="{% static 'Eco_Tourism/css/blog.css' %}" rel="stylesheet">
+    <link href="{% static 'Eco_Tourism/css/blog_about.css' %}" rel="stylesheet">
     <title>Blog</title>
 </head>
 <body>
@@ -16,19 +17,101 @@
 <!--    Navbar off-->
 
 <div class="container mt-5">
-    <strong class="display-4 fw-bold" >Sundarban </strong>
-    <div class="mt-3 ">
+    <strong class="display-4 fw-bold">Sundarban </strong>
+    <div class="image-container">
         <img class="img-fluid" src="{% static 'Eco_Tourism/blog_image/sundarban.jpg' %}" alt="Sundarban Image"></div>
-    <div class="row mt-3">
-        <div class="col-lg-9">
-        <strong class="display-6 fw-bold">About</strong>
+    <div class="mt-5">
+        <strong class="display-6  fw-bold">About</strong>
+        <p class="about_section mt-5">
+            The Sundarbans Reserve Forest (SRF), located in the south-west of Bangladesh between the river Baleswar in
+            the East and the Harinbanga in the West, adjoining to the Bay of Bengal, is the largest contiguous mangrove
+            forest in the world. Lying between latitude 21° 27′ 30″ and 22° 30′ 00″ North and longitude 89° 02′ 00″ and
+            90° 00′ 00″ East and with a total area of 10,000 km2, 60% of the property lies in Bangladesh and the rest in
+            India. The land area, including exposed sandbars, occupies 414,259 ha (70%) with water bodies covering
+            187,413 ha (30%).
 
+            The three wildlife sanctuaries in the south cover an area of 139,700 ha and are considered core breeding
+            areas for a number of endangered species. Situated in a unique bioclimatic zone within a typical
+            geographical situation in the coastal region of the Bay of Bengal, it is a landmark of ancient heritage of
+            mythological and historical events. Bestowed with magnificent scenic beauty and natural resources, it is
+            internationally recognized for its high biodiversity of mangrove flora and fauna both on land and water.
 
+            The immense tidal mangrove forests of Bangladeshs’ Sundarbans Forest Reserve, is in reality a mosaic of
+            islands of different shapes and sizes, perennially washed by brackish water shrilling in and around the
+            endless and mind-boggling labyrinths of water channels. The site supports exceptional biodiversity in its
+            terrestrial, aquatic and marine habitats; ranging from micro to macro flora and fauna. The Sundarbans is of
+            universal importance for globally endangered species including the Royal Bengal Tiger, Ganges and Irawadi
+            dolphins, estuarine crocodiles and the critically endangered endemic river terrapin (Batagur baska). It is
+            the only mangrove habitat in the world for Panthera tigris tigris species.
+        </p>
+        <div class=" image-container">
+            <img class="img-fluid mx-auto" src="{% static 'Eco_Tourism/blog_image/Sundarban_Tiger.jpg' %}"
+                 alt="Sundarban Image"></div>
 
-        </div>
-        <div class="col-lg-3">
-        </div>
     </div>
+    <div class="mt-3">
+        <strong class="display-6  fw-bold">Challenges</strong>
+        <p class="about_section mt-5">
+            The Sundarbans presents a range of challenges due to its unique environment. Harsh climate conditions, such
+            as monsoon rains and cyclones, create difficulty for both residents and visitors. Rising sea levels and
+            riverbank erosion contribute to flooding and habitat loss. Wildlife-human conflicts, especially with Bengal
+            tigers, pose safety concerns. Limited infrastructure, including access to clean water and sanitation,
+            hinders development. Overfishing and deforestation disrupt the delicate ecosystem. The area's vulnerability
+            to climate change, coupled with health risks and limited economic opportunities, further compound the
+            challenges. Finding a balance between conservation and sustainable development, alongside effective
+            governance and connectivity, is crucial for addressing these complex issues in the
+            Sundarbans.
+        </p>
+        <div class="  image-container">
+            <img  class="img-fluid mx-auto" src="{% static 'Eco_Tourism/blog_image/sundarban_tree.jpg' %}"
+                 alt="Sundarban Image"></div>
+
+    </div>
+    <div class="mt-3">
+        <strong class="display-6  fw-bold">Tourist Place</strong>
+        <div class="row mt-5 gy-3 gx-md-3">
+            <div class="col-lg-3 col-sm-6  col-md-5 ">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{% static 'Eco_Tourism/blog_image/1s.jpg' %}" style="width: 100%; height: 200px; object-fit: cover;" alt="Card image cap">
+                    <div class="card-body">
+                        <h6 class="card-title">Sajnekhali Wildlife Sanctuary</h6>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-sm-6 col-md-5">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{% static 'Eco_Tourism/blog_image/2s.jpg' %}" style="width: 100%; height: 200px; object-fit: cover;" alt="Card image cap">
+                    <div class="card-body">
+                        <h6 class="card-title">Sunderbans National Park</h6>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-sm-6 col-md-5">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{% static 'Eco_Tourism/blog_image/3s.jpg' %}" style="width: 100%; height: 200px; object-fit: cover;" alt="Card image cap">
+                    <div class="card-body">
+                        <h6 class="card-title">Dobanki Watchtower</h6>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-3 col-sm-6  col-md-5">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{% static 'Eco_Tourism/blog_image/4s.jpg' %}" style="width: 100%; height: 200px; object-fit: cover;" alt="Card image cap">
+                    <div class="card-body">
+                        <h6 class="card-title">Henry's Island</h6>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
 
 </div>
 
